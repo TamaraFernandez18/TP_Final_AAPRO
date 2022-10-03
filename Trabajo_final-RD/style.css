@@ -1,0 +1,442 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-image: url("images/background/maps.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/*** CONTENEDOR ***/
+.grid-container {
+    margin: 35px;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main aside"
+        "main main aside"
+        "main main aside"
+        "main main aside"
+        "contact contact aside"
+        "footer footer footer";
+    grid-template-columns: 2fr 2fr 1fr;
+    height: 90%;
+    gap: 3px;
+}
+
+/*** ENCABEZADO ***/
+.grid-header {
+    background: url("images/background/banner3.png");
+    grid-area: header;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 850px;
+
+
+}
+
+/*** BARRA DE NAVEGACIÓN ***/
+.grid-nav {
+    background: #00C4CC;
+    font-size: 30px;
+    display: block;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    width: 251%;
+    z-index: 1;
+}
+
+.grid-nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.grid-nav li {
+    float: left;
+}
+
+.grid-nav li a:hover {
+    background-color: #009490;
+    color: #FFFF;
+}
+
+.grid-nav a {
+    display: block;
+    color: #FFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*** CONTENIDO ***/
+.grid-main {
+    grid-area: main;
+    background-color: #F5E9DB;
+    color: #025159;
+    padding: 20px;
+
+}
+
+/*** ASIDE ***/
+.grid-aside {
+    background: #034d5a;
+    grid-area: aside;
+    padding-top: 25px;
+    padding: 10px;
+    color: #F5E9DB;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.grid-aside h2 {
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.grid-aside img {
+    width: auto;
+    height: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.grid-aside a {
+    color: #F5E9DB;
+    padding: 15px;
+}
+
+/*** CONTENIDO | ASIDE | Hora ***/
+.hora {
+    text-align: center;
+    font-size: 40px;
+    color: #F5E9DB;
+    border: double;
+    background: #013440;
+}
+
+
+/*** CONTACTO ***/
+.grid-contact {
+    grid-area: contact;
+    background: #009490;
+    color: rgb(255, 255, 255);
+}
+
+
+/*** CONTACTO | formulario ***/
+.form {
+    padding-top: 20px;
+    text-align: center;
+
+}
+
+.form h1 {
+    margin-bottom: 30px;
+}
+
+.input,
+textarea {
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    width: 300px;
+}
+
+.field {
+    border: solid 1px #ccc;
+    padding: 10px;
+    width: 350px;
+    margin: 10px;
+}
+
+.font {
+    font-size: 18px;
+    margin: 5px;
+}
+
+
+/*** CONTACTO | botón Enviar ***/
+.btn-input {
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 20px 15px;
+    width: 300px;
+    margin: 20px;
+    background-color: #B4D2D9;
+}
+
+.btn-send {
+    border: none;
+    background-color: #013440;
+    color: azure;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.btn-send:hover {
+    background-color: #FC7138;
+}
+
+.btn-wspp {
+    text-align: center;
+}
+
+.btn-wspp img {
+    width: 15%;
+    border-radius: 55px;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.font-wspp {
+    justify-content: center;
+    padding-top: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/*** PIE DE PÁGINA ***/
+.grid-footer {
+    background: #F5E9DB;
+    grid-area: footer;
+    color: #013440;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+
+/*** CONTENIDO | INDEX | Cards y modificación (bootstrap) ***/
+.card-body {
+    background: #ffff;
+}
+
+.card-title {
+    font-size: 30px;
+}
+
+.btn-primary {
+    float: right;
+}
+
+
+/*** CONTENIDO | AUTORIDADES |Tabla ***/
+table {
+    width: 100%;
+    font-size: 30px;
+}
+
+tbody tr td {
+    text-align: center;
+    border: 2px solid #013440;
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+
+tbody #bold{
+    font-size: 40px;
+    font-style: italic;
+}
+
+tbody img{
+    border-radius: 25px;
+}
+
+tr,
+td {
+    padding: 10px;
+}
+
+
+/*** CONTENIDO | NATURALEZA | Galería de imágenes ***/
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.galeria-img{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.galeria-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titulo_centrado {
+    color: #013440;
+    padding: 10px;
+    font-size: 22px;
+    text-align: center;
+}
+.titulo_centrado h2{
+    font-size: 50px;
+    font-style: italic;
+}
+
+/*** CONTENIDO | NATURALEZA | Descargar archivo ***/
+#descarga_img {
+    text-align: center;
+}
+
+#btn-descarga {
+    width: 380px;   
+    height: 40px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: #013440;
+    color: azure;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 20px;
+}
+
+#btn-descarga:hover {
+    background-color: #FC7138;
+}
+
+
+/*** CONTENIDO | INDEX | Video YouTube ***/
+#video {
+    justify-content: center;
+    text-align: center;
+}
+
+#video iframe {
+    padding-top: 20px;
+}
+
+
+/*** CONTENIDO | SHOP | Listado de productos ***/
+#shop h1 {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #FC7138;
+    font-size: 60px;
+}
+
+.productos {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.producto {
+    border: 5px double #009490;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.producto_titulo {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.producto_precio {
+    color: #013440;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.producto_img {
+    width: 100%;
+    width: 350px;
+    object-fit: cover;
+}
+
+.producto_img_ajuste {
+    width: 250px;
+    height: 350px;
+}
+
+.compra {
+    justify-content: center;
+    padding-top: 30px;
+    display: grid;
+    grid-template-areas:
+        "articulo select-art cantidad select-cant preciofinal boton";
+    grid-template-columns: 100px;
+    height: 90%;
+    gap: 10px;
+    font-size: 20px;
+}
+
+
+/*** CONTENIDO | SHOP | Cantidad y precio ***/
+#articulo {
+    grid-area: articulo;
+    font-size: 25px;
+}
+
+#select-art {
+    grid-area: select-art;
+}
+
+#cantidad {
+    grid-area: cantidad;
+    font-size: 25px;
+}
+
+#select-cant {
+    grid-area: select-cant;
+}
+
+#precio_final {
+    grid-area: preciofinal;
+    font-size: 25px;
+}
+
+#addcarrito {
+    grid-area: boton;
+
+}
+
+#addcarrito input {
+    width: 170px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: #013440;
+    color: azure;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+#addcarrito input:hover {
+    background-color: #FC7138;
+}
+
+/*** CONTENIDO | SANTUARIO | Articulo y modificación del carrusel (bootstrap)***/
+#parrafo{
+    text-align: justify;
+}
+#carouselExampleCaptions{
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
